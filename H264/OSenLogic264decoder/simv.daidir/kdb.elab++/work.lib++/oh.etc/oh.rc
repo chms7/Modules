@@ -1,0 +1,6 @@
+@elabcom rc file Version 1.0
+[oh]
+invokeDir = /mnt/chms/WorkbenchWSL/Modules/H264/OSenLogic264decoder
+hostCommand = -lib simv.daidir/work -saveLevel -elab simv.daidir/kdb -simflow -simdir simv.daidir/kdb_libs -top "dc_fifo_async_read dp_ram_be read_bits video_output bitstream_tb" -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389 -SNPS_ELABCOM -saveE\
+lab
+simType = VCS

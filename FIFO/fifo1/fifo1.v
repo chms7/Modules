@@ -1,7 +1,7 @@
 /*
  * @Design: fifo1 
  * @Author: chms 
- * @Email: cheems@foxmail.com
+ * @Email:  cheems@foxmail.com
  * @Description: Top wrapper of FIFO
  */
 module fifo1 #(
@@ -9,10 +9,15 @@ module fifo1 #(
   parameter ASIZE = 4
 )(
   output [DSIZE-1:0]  rdata,
-  output              rempty, wfull,
+  output              rempty,
+  output              wfull,
   input  [DSIZE-1:0]  wdata,
-  input winc, wclk, wrst_n,
-  input rinc, rclk, rrst_n
+  input               winc,
+  input               wclk,
+  input               wrst_n,
+  input               rinc,
+  input               rclk,
+  input               rrst_n
 );
   wire [ASIZE-1:0] raddr, waddr;
   wire [ASIZE  :0] rptr, wptr, rq2_wptr, wq2_rptr;
